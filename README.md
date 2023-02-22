@@ -1,5 +1,6 @@
 # Speech Recognition with Vue.js and OpenAI API
 This repository contains code for a simple web app that uses Vue.js and the OpenAI API to provide speech recognition and text-to-speech conversion.
+It allows almost a conversational approach to using open AIs Chat GPT
 
 ## Getting Started
 To run the application, clone the repository and navigate to the directory containing the code. 
