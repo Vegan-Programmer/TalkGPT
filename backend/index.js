@@ -7,7 +7,7 @@ const fs = require("fs");
 
 // Initialize OpenAI API and AWS SDK with the necessary configurations
 const { Configuration, OpenAIApi } = require("openai");
-const configuration = new Configuration({ apiKey: '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'});
+const configuration = new Configuration({ apiKey: ''});
 const openai = new OpenAIApi(configuration);
 const AWS = require("aws-sdk");
 AWS.config.loadFromPath("awsCreds.json");
