@@ -10,6 +10,8 @@ const { Configuration, OpenAIApi } = require("openai");
 const configuration = new Configuration({ apiKey: ''});
 const openai = new OpenAIApi(configuration);
 const AWS = require("aws-sdk");
+
+// Load Amazon credentials from awsCreds.json file
 AWS.config.loadFromPath("awsCreds.json");
 
 // Register middleware for parsing request data and enabling CORS for API responses.
@@ -52,8 +54,8 @@ app.post('/api/text-to-audio-file', async (req, res) => {
         if (num) fs.writeFileSync(filePath + fileName, data.AudioStream)
     })
 
-    // Send the generated file name back in the response after a delay of 4.5 seconds.
-    setTimeout(() => { res.status(200).json(num) }, 4500)
+    // Send the generated file name back in the response after a delay of 1 second.
+    setTimeout(() => { res.status(200).json(num) }, 1000)
 })
 
 // Start the server and log a message to indicate that it's ready.
